@@ -10,12 +10,12 @@ html
           h1 Blog Archive
 
           each post in posts
-            if dates.format(post.date,"MMMM yyyy") != last_month
-              h3 #{dates.format(post.date,"MMMM yyyy")}
+            if formatter.format(post.date,"MMMM yyyy") != last_month
+              h3 #{formatter.format(post.date,"MMMM yyyy")}
 
-            h4 #{dates.format(post.date,"dd")} -
+            h4 #{formatter.format(post.date,"dd")} -
               a(href='#{post.uri}') #{post.title}
 
-            last_month = dates.format(post.date,"MMMM yyyy")
+            last_month = formatter.format(post.date,"MMMM yyyy")
 
   include footer.jade

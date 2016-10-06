@@ -10,7 +10,7 @@ html
           h1 #{content.title}
 
           p
-            em #{dates.format(content.date,"dd MMMM yyyy")}
+            em #{formatter.format(content.date,"dd MMMM yyyy")}
 
           p !{content.body}
 

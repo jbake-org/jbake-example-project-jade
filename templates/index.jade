@@ -11,7 +11,7 @@ html
           each post in published_posts
             a(href="#{post.uri}")
               h1 #{post.title}
-            p #{dates.format(post.date,"dd MMMM yyyy")}
+            p #{formatter.format(post.date,"dd MMMM yyyy")}
             p !{post.body}
 
           hr
