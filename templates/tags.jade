@@ -15,6 +15,6 @@ html
             h4 #{formatter.format(tag.date,"dd")} -
               a(href='#{tag.url}') #{tag.title}
 
-            last_month = formatter.format(post.date,"MMMM yyyy")
+            - var last_month = formatter.format(post.date,"MMMM yyyy")
 
   include footer.jade
